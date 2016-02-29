@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * @author zinntikumugai
+ * @Licence GPL v3.0
  *
  */
 public class SetCommandBlock extends JavaPlugin {

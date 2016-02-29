@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
  * @author zinntikumugai
+ * @Licence GPL v3.0
  *
  */
 public class SetCommandBlock_Listerer implements Listener {
