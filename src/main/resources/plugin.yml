@@ -1,0 +1,14 @@
+name: SetCommand_Block
+main: com.github.zinntikumugai.setcommandblock.SetCommandBlock
+version: 0.0.1
+author: zinntikumugai
+permissions:
+
+  setcommandblock.set:
+    description: Can Place CommandBlock
+    default: false
+    
+  setcommandblock.*:
+    default: false
+    children:
+      setcommandblock.set: true;
