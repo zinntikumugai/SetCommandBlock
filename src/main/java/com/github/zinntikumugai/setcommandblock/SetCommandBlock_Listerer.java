@@ -52,5 +52,7 @@ public class SetCommandBlock_Listerer implements Listener {
 		//ブロックを置く
 		SetCommandBlock_SetBlock.setblock(event);
 
+		//プレイヤーのインベントリからアイテムを減らす
+		SetCommandBlock_Item.itemdelete(event.getPlayer());
 	}
 }
