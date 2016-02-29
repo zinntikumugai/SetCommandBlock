@@ -25,7 +25,12 @@ public class SetCommandBlock_Item {
 			System.out.println("xxxxxxxxxxxxxx");
 		}
 
-		inventory.remove(itemstack);
+
+		ItemStack ditemstack = inventory.getItemInHand();
+		ditemstack.setAmount(ditemstack.getAmount() - 1);
+		inventory.setItemInHand(ditemstack);
+		//アイテムが減らないため削除
+		//inventory.remove(itemstack);
 
 	}
 }
