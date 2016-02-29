@@ -11,4 +11,4 @@ permissions:
   setcommandblock.*:
     default: false
     children:
-      setcommandblock.set: true;
+      setcommandblock.set: true
