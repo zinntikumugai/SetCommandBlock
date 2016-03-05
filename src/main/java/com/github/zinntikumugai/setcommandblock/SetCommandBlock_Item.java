@@ -3,6 +3,7 @@
  */
 package com.github.zinntikumugai.setcommandblock;
 
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -15,6 +16,10 @@ import org.bukkit.inventory.PlayerInventory;
 public class SetCommandBlock_Item {
 
 	public static void itemdelete(Player player) {
+
+		if(player.getGameMode().equals(GameMode.CREATIVE)) {
+			return;
+		}
 
 		PlayerInventory inventory = player.getInventory();
 		//ItemStack itemstack = new ItemStack(Material.COMMAND , 1);
