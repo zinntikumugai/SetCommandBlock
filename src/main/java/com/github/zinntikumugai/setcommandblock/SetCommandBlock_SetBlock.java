@@ -36,7 +36,7 @@ public class SetCommandBlock_SetBlock {
 
 		System.out.println("air");
 		//置く予定地にEntityが存在するか
-		if( block.isEmpty()) {
+		if( !(block.isEmpty()) ) {
 			return;
 		}
 		System.out.println("noentity");
