@@ -34,6 +34,11 @@ public class SetCommandBlock_SetBlock {
 			return;
 		}
 
+		//置く予定地にEntityが存在するか
+		if( block.isEmpty()) {
+			return;
+		}
+
 		//ブロックをおく
 		block.setType(Material.COMMAND);
 	}
