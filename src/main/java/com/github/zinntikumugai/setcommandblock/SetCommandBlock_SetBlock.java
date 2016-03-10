@@ -34,14 +34,14 @@ public class SetCommandBlock_SetBlock {
 			return;
 		}
 
-		System.out.println("air");
+		//System.out.println("air");
 		//置く予定地にEntityが存在するか
-		if( !(block.isEmpty()) ) {
-			return;
-		}
-		System.out.println("noentity");
+
+		//System.out.println("noentity");
 
 		//ブロックをおく
 		block.setType(Material.COMMAND);
 	}
+
+
 }

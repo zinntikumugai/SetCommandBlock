@@ -34,6 +34,11 @@ public class SetCommandBlock_Listerer implements Listener {
 			return;
 		}
 
+		//置こうとしたプレイヤーがOPだったら終了
+		//2616/3/7/追加
+		if( event.getPlayer().isOp())
+			return;
+
 
 		//コマンドブロックにコマンドブロックを置こうとしたとき
 		if(event.getClickedBlock().getType().equals(Material.COMMAND)) {
