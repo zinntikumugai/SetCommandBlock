@@ -41,12 +41,20 @@ public class SetCommandBlock_SetBlock {
 		//設置場所に自分がいたら終了
 		/* ごっちゃんありがとう! */
 
-		Block pb = player.getLocation().getBlock();
+		Location pl = player.getLocation();
+		Block pb = pl.getBlock();
 
 		if( pb.equals(block)) {
 			System.out.println("gggg");
 		}
 
+		pl.setY( pl.getY()+1 );
+		pb = pl.getBlock();
+
+		if( pb.equals(block) ) {
+			System.out.println("tttttt");
+		}
+/*
 		Location pl = player.getLocation();
 		pl.setX( (int)pl.getX() +1);	//Xが足りないので強制的に追加	//対応策考え中
 		pl.setY( (int)pl.getY() );
@@ -64,7 +72,7 @@ public class SetCommandBlock_SetBlock {
 		pl.setY( pl.getY() + 1);
 		if( pl.equals(location) ) {
 			return;
-		}
+		}*/
 
 		/*System.out.println(block.getLocation());
 		System.out.println(pl);
