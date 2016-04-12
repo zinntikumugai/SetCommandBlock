@@ -42,7 +42,7 @@ public class SetCommandBlock_SetBlock {
 		/* ごっちゃんありがとう! */
 
 		Location pl = player.getLocation();
-		pl.setX( (int)pl.getX() );
+		pl.setX( (int)pl.getX() +1);	//Xが足りないので強制的に追加	//対応策考え中
 		pl.setY( (int)pl.getY() );
 		pl.setZ( (int)pl.getZ() );
 
@@ -50,9 +50,19 @@ public class SetCommandBlock_SetBlock {
 		location.setY( (int)location.getY() );
 		location.setZ( (int)location.getZ() );
 
-		System.out.println(block.getLocation());
+		if( pl.equals(location) ) {
+			return;
+		}
+
+		//プレイヤーの上側に置かれたら終了
+		pl.setY( pl.getY() + 1);
+		if( pl.equals(location) ) {
+			return;
+		}
+
+		/*System.out.println(block.getLocation());
 		System.out.println(pl);
-		System.out.println(location);
+		System.out.println(location);*/
 
 
 		/*まったくもって座標は同じではないため廃止
