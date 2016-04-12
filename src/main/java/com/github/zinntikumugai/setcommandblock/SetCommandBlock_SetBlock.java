@@ -43,8 +43,16 @@ public class SetCommandBlock_SetBlock {
 
 		Location pl = player.getLocation();
 		pl.setX( (int)pl.getX() );
+		pl.setY( (int)pl.getY() );
+		pl.setZ( (int)pl.getZ() );
 
-		System.out.println(pl.getX());
+		location.setX( (int)location.getX() );
+		location.setY( (int)location.getY() );
+		location.setZ( (int)location.getZ() );
+
+		System.out.println(pl);
+		System.out.println(location);
+
 
 		/*まったくもって座標は同じではないため廃止
 		 * if( player.getLocation() == location ) {
