@@ -41,19 +41,24 @@ public class SetCommandBlock_SetBlock {
 		//設置場所に自分がいたら終了
 		/* ごっちゃんありがとう! */
 
+		//プレイヤーの座標(足部)のブロックを取得
 		Location pl = player.getLocation();
 		Block pb = pl.getBlock();
 
+		//取得したブロックと同じ座標ならば終了
 		if( pb.equals(block)) {
-			System.out.println("gggg");
+			return;
 		}
 
+		//プレイヤーの胸部(足部のYを+1)のブロックを取得
 		pl.setY( pl.getY()+1 );
 		pb = pl.getBlock();
 
+		//取得したブロックと同じ座標ならば終了
 		if( pb.equals(block) ) {
-			System.out.println("tttttt");
+			return;
 		}
+
 /*
 		Location pl = player.getLocation();
 		pl.setX( (int)pl.getX() +1);	//Xが足りないので強制的に追加	//対応策考え中
