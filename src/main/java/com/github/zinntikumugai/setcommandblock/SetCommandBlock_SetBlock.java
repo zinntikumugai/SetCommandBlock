@@ -6,6 +6,7 @@ package com.github.zinntikumugai.setcommandblock;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 /**
@@ -34,10 +35,15 @@ public class SetCommandBlock_SetBlock {
 			return;
 		}
 
-		//System.out.println("air");
-		//置く予定地にEntityが存在するか
 
-		//System.out.println("noentity");
+		Player player = event.getPlayer();
+
+		//設置場所に自分がいたら終了
+		/* ごっちゃんありがとう! */
+		if( player.getLocation() == location ) {
+			return;
+		}
+
 
 		//ブロックをおく
 		block.setType(Material.COMMAND);
