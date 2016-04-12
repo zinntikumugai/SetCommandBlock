@@ -40,9 +40,16 @@ public class SetCommandBlock_SetBlock {
 
 		//設置場所に自分がいたら終了
 		/* ごっちゃんありがとう! */
-		if( player.getLocation() == location ) {
+
+		Location pl = player.getLocation();
+		pl.setX( (int)pl.getX() );
+
+		System.out.println(pl.getX());
+
+		/*まったくもって座標は同じではないため廃止
+		 * if( player.getLocation() == location ) {
 			return;
-		}
+		}*/
 
 
 		//ブロックをおく
