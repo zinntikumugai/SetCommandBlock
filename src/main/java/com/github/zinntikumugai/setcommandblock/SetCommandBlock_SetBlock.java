@@ -50,6 +50,7 @@ public class SetCommandBlock_SetBlock {
 		location.setY( (int)location.getY() );
 		location.setZ( (int)location.getZ() );
 
+		System.out.println(block.getLocation());
 		System.out.println(pl);
 		System.out.println(location);
 
