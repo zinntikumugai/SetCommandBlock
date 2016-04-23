@@ -40,6 +40,8 @@ public class SetCommandBlock_BlackList {
 		//スイッチ
 		Material.WOOD_BUTTON,							//木
 		Material.STONE_BUTTON,						//石
+		Material.STONE_BUTTON,							//石のボタン
+		Material.WOOD_BUTTON,							//木のボタン
 		//その他
 		Material.DIODE,									//リピータ	//下の二つがブロックでこれがアイテム？
 		Material.DIODE_BLOCK_OFF,						//オフのリピータ(ブロック)
@@ -79,7 +81,7 @@ public class SetCommandBlock_BlackList {
 		 * @return ture	該当するブロック
 		 * @return false	該当しないブロック
 		 */
-	public boolean ChekBlock(Block block) {
+	public static boolean ChekBlock(Block block) {
 
 		for(int i=0; i<Materials; i++) {
 			if(block.getType().equals( list[i] ))

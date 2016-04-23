@@ -31,16 +31,23 @@ public class SetCommandBlock_SetBlock {
 		Block block = location.getBlock();
 
 		//置く予定地にすでに置いてないかチェック(看板なのど)
-		if( !(block.getType().equals(Material.AIR)) ) {
+		/*if( !(block.getType().equals(Material.AIR)) ) {
 			return;
-		}
-
+		}*/
+		if( SetCommandBlock_BlackList.ChekBlock(block) )
+			return;
 
 		Player player = event.getPlayer();
 
 		//設置場所に自分がいたら終了
 		/* ごっちゃんありがとう! */
 
+		Location pl = player.getLocation();
+		location.setX( (int)location.getX() + 0.5 );		//ブロックのXにブロックの中心点0.5を足してブロックの中心が来るようにする
+		location.setZ( (int)location.getZ() + 0.5 );
+
+
+/*プレイヤーがちょっとブロックより外側にいると検出できないので廃止
 		//プレイヤーの座標(足部)のブロックを取得
 		Location pl = player.getLocation();
 		Block pb = pl.getBlock();
@@ -58,7 +65,7 @@ public class SetCommandBlock_SetBlock {
 		if( pb.equals(block) ) {
 			return;
 		}
-
+*/
 /*
 		Location pl = player.getLocation();
 		pl.setX( (int)pl.getX() +1);	//Xが足りないので強制的に追加	//対応策考え中
