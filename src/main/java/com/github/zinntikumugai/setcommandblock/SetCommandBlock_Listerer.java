@@ -48,6 +48,12 @@ public class SetCommandBlock_Listerer implements Listener {
 				return;
 			}
 		}
+/*
+			if( !(event.getPlayer().isSneaking())) {
+				if( SetCommandBlock_BlackList.ChekBlock( event.getPlayer().getItemInHand().getType()) ) {
+					return;
+				}
+			}*/
 
 		//権限を持っていないなら終了
 		if( !(event.getPlayer().hasPermission(permission_str)) ) {

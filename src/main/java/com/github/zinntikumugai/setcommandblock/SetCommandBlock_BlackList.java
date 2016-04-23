@@ -4,7 +4,6 @@
 package com.github.zinntikumugai.setcommandblock;
 
 import org.bukkit.Material;
-import org.bukkit.block.Block;
 
 /**
  * @author zinntikumugai
@@ -81,10 +80,10 @@ public class SetCommandBlock_BlackList {
 		 * @return ture	該当するブロック
 		 * @return false	該当しないブロック
 		 */
-	public static boolean ChekBlock(Block block) {
+	public static boolean ChekBlock(Material m) {
 
 		for(int i=0; i<Materials; i++) {
-			if(block.getType().equals( list[i] ))
+			if(m.equals( list[i] ))
 				return true;
 		}
 		return false;

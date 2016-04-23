@@ -34,7 +34,7 @@ public class SetCommandBlock_SetBlock {
 		/*if( !(block.getType().equals(Material.AIR)) ) {
 			return;
 		}*/
-		if( SetCommandBlock_BlackList.ChekBlock(block) )
+		if( SetCommandBlock_BlackList.ChekBlock(block.getType()) )
 			return;
 
 		Player player = event.getPlayer();
